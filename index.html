@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Respirar – Terapia que acolhe e transforma</title>
+    <meta name="description" content="Atendimento psicanalítico presencial e online com foco em escuta profunda e acolhimento. Terapia individual, casal, infantil e supervisão.">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Open+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Refined Color Palette */
+            --primary-gold: #C9A961;
+            --primary-gold-light: #E4D4A7;
+            --primary-gold-dark: #A58940;
+            --accent-warm: #D4B896;
+            --accent-copper: #B5956A;
+            --neutral-50: #FDFCFA;
+            --neutral-100: #F9F7F4;
+            --neutral-200: #F1EDE6;
+            --neutral-300: #E5DED4;
+            --neutral-400: #C7BAA7;
+            --neutral-500: #A3937F;
+            --neutral-600: #7A6B5A;
+            --neutral-700: #54493C;
+            --neutral-800: #322A21;
+            --neutral-900: #1C1611;
+            --pure-white: #FFFFFF;
+            
+            /* Semantic Colors */
+            --text-primary: var(--neutral-900);
+            --text-secondary: var(--neutral-700);
+            --text-muted: var(--neutral-600);
+            --text-light: var(--neutral-500);
+            --bg-primary: var(--neutral-50);
+            --bg-secondary: var(--pure-white);
+            --bg-subtle: var(--neutral-100);
+            
+            /* Enhanced Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-light) 50%, var(--primary-gold) 100%);
+            --gradient-warm: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+            --gradient-subtle: linear-gradient(135deg, rgba(201, 169, 97, 0.03) 0%, rgba(249, 247, 244, 0.6) 100%);
+            --gradient-overlay: linear-gradient(135deg, rgba(201, 169, 97, 0.05) 0%, transparent 100%);
+            --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 169, 97, 0.08) 0%, transparent 60%);
+            
+            /* Advanced Shadows */
+            --shadow-xs: 0 1px 2px rgba(28, 22, 17, 0.04);
+            --shadow-sm: 0 2px 4px rgba(28, 22, 17, 0.06);
+            --shadow-md: 0 4px 12px rgba(28, 22, 17, 0.08);
+            --shadow-lg: 0 8px 24px rgba(28, 22, 17, 0.10);
+            --shadow-xl: 0 16px 32px rgba(28, 22, 17, 0.12);
+            --shadow-2xl: 0 24px 48px rgba(28, 22, 17, 0.15);
+            --shadow-gold: 0 8px 24px rgba(201, 169, 97, 0.15);
+            --shadow-gold-lg: 0 16px 32px rgba(201, 169, 97, 0.20);
+            --shadow-inner: inset 0 2px 4px rgba(28, 22, 17, 0.06);
+            
+            /* Enhanced Transitions */
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* Typography Scale */
+            --text-xs: 0.75rem;   /* 12px */
+            --text-sm: 0.875rem;  /* 14px */
+            --text-base: 1rem;    /* 16px */
+            --text-lg: 1.125rem;  /* 18px */
+            --text-xl: 1.25rem;   /* 20px */
+            --text-2xl: 1.5rem;   /* 24px */
+            --text-3xl: 1.875rem; /* 30px */
+            --text-4xl: 2.25rem;  /* 36px */
+            --text-5xl: 3rem;     /* 48px */
+            --text-6xl: 3.75rem;  /* 60px */
+            --text-7xl: 4.5rem;   /* 72px */
+            
+            /* Spacing Scale */
+            --space-1: 0.25rem;   /* 4px */
+            --space-2: 0.5rem;    /* 8px */
+            --space-3: 0.75rem;   /* 12px */
+            --space-4: 1rem;      /* 16px */
+            --space-5: 1.25rem;   /* 20px */
+            --space-6: 1.5rem;    /* 24px */
+            --space-8: 2rem;      /* 32px */
+            --space-10: 2.5rem;   /* 40px */
+            --space-12: 3rem;     /* 48px */
+            --space-16: 4rem;     /* 64px */
+            --space-20: 5rem;     /* 80px */
+            --space-24: 6rem;     /* 96px */
+            --space-32: 8rem;     /* 128px */
+            
+            /* Border Radius Scale */
+            --radius-sm: 0.375rem;  /* 6px */
+            --radius-md: 0.5rem;    /* 8px */
+            --radius-lg: 0.75rem;   /* 12px */
+            --radius-xl: 1rem;      /* 16px */
+            --radius-2xl: 1.5rem;   /* 24px */
+            --radius-3xl: 2rem;     /* 32px */
+            --radius-4xl: 2.5rem;   /* 40px */
+            --radius-full: 9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Modern CSS Reset */
+        html {
+            -webkit-text-size-adjust: 100%;
+            font-feature-settings: 'kern' 1;
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+            font-feature-settings: 'kern' 1, 'liga' 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Enhanced Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--neutral-200);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: var(--radius-full);
+            transition: var(--transition-base);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-gold-dark);
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary-gold-light);
+            color: var(--text-primary);
+        }
+
+        ::-moz-selection {
+            background: var(--primary-gold-light);
+            color: var(--text-primary);
+        }
+
+        /* Focus Styles */
+        :focus-visible {
+            outline: 2px solid var(--primary-gold);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* Enhanced Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-xl);
+            z-index: 1001;
+            transform: translateY(100%);
+            transition: var(--transition-smooth);
+            border-top: 1px solid rgba(201, 169, 97, 0.15);
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 280px;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .cookie-text a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition-base);
+        }
+
+        .cookie-text a:hover {
+            border-bottom-color: var(--primary-gold);
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: var(--space-3);
+            flex-shrink: 0;
+        }
+
+        .btn-cookie {
+            padding: var(--space-3) var(--space-6);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            transition: var(--transition-base);
+            font-family: inherit;
+            white-space: nowrap;
+        }
+
+        .btn-accept {
+            background: var(--primary-gold);
+            color: var(--pure-white);
+        }
+
+        .btn-accept:hover {
+            background: var(--primary-gold-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-manage {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--neutral-300);
+        }
+
+        .btn-manage:hover {
+            background: var(--neutral-100);
+            border-color: var(--primary-gold);
+        }
+
+        /* Enhanced Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(253, 252, 250, 0.90);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            z-index: 1000;
+            transition: var(--transition-base);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.08);
+        }
+
+        .header.scrolled {
+            background: rgba(253, 252, 250, 0.95);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-3) 0;
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-4);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            text-decoration: none;
+            transition: var(--transition-base);
+            flex-shrink: 0;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            height: 148px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(201, 169, 97, 0.15));
+            transition: var(--transition-base);
+        }
+
+        .logo-container:hover .logo-image {
+            filter: drop-shadow(0 4px 8px rgba(201, 169, 97, 0.25));
+        }
+
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            padding: var(--space-2);
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            transition: var(--transition-base);
+            color: var(--text-primary);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--neutral-100);
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 5px 0;
+            transition: var(--transition-base);
+            border-radius: 1px;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .header-cta {
+            display: flex;
+            gap: var(--space-3);
+            align-items: center;
+        }
+
+        .btn-header {
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            transition: var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-family: inherit;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--pure-white);
+            border: none;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition-base);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-gold-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-secondary {
+            background: var(--pure-white);
+            color: var(--text-primary);
+            border: 1px solid var(--neutral-300);
+            box-shadow: var(--shadow-xs);
+        }
+
+        .btn-secondary:hover {
+            background: var(--neutral-100);
+            border-color: var(--primary-gold);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(253, 252, 250, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            padding: 100px var(--space-6) var(--space-6);
+            transform: translateY(-100%);
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-nav.active {
+            transform: translateY(0);
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+            list-style: none;
+            margin-bottom: var(--space-8);
+        }
+
+        .mobile-nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: var(--text-xl);
+            font-weight: 500;
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-base);
+            display: block;
+        }
+
+        .mobile-nav-links a:hover {
+            background: var(--neutral-100);
+            color: var(--primary-gold);
+        }
+
+        .mobile-nav-cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: var(--space-32) 0;
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-hero);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -10%;
+            width: 40%;
+            height: 60%;
+            background: radial-gradient(ellipse, rgba(201, 169, 97, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: var(--space-24);
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(var(--text-4xl), 5vw, var(--text-7xl));
+            font-weight: 600;
+            margin-bottom: var(--space-8);
+            line-height: 1.1;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+        }
+
+        .hero-text h1 .highlight {
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease-in-out infinite;
+            font-style: italic;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-family: 'Crimson Text', serif;
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-12);
+            font-weight: 400;
+            line-height: 1.8;
+            max-width: 90%;
+            font-style: italic;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-4);
+            margin-bottom: var(--space-16);
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+            padding: var(--space-8) 0;
+            border-top: 1px solid var(--neutral-200);
+        }
+
+        .stat-item {
+            text-align: left;
+            padding: var(--space-4) 0;
+            position: relative;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-2);
+            line-height: 1;
+            transition: var(--transition-base);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-light);
+            font-weight: 500;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+        }
+
+        .hero-visual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-6);
+            height: 500px;
+        }
+
+        .hero-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-4xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full) var(--radius-full) 0 0;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .hero-card.card-main {
+            grid-row: span 2;
+            background: linear-gradient(135deg, var(--pure-white) 0%, var(--neutral-50) 100%);
+        }
+
+        .hero-card.card-main::before {
+            height: 6px;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-6);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .card-main .card-icon {
+            width: 80px;
+            height: 80px;
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-8);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            line-height: 1.3;
+        }
+
+        .card-main .card-title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-6);
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: var(--text-sm);
+        }
+
+        .card-main .card-description {
+            font-size: var(--text-base);
+            margin-bottom: var(--space-8);
+        }
+
+        .card-stats {
+            display: flex;
+            gap: var(--space-6);
+            margin-top: var(--space-6);
+        }
+
+        .mini-stat {
+            text-align: center;
+        }
+
+        .mini-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--primary-gold);
+            line-height: 1;
+        }
+
+        .mini-stat-label {
+            font-size: var(--text-xs);
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: var(--space-1);
+        }
+
+        /* Enhanced Animations */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes fadeInRight {
+            from { 
+                opacity: 0; 
+                transform: translateX(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0); 
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        /* Enhanced Button Styles */
+        .btn-modern {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-6);
+            background: var(--pure-white);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            font-weight: 500;
+            font-size: var(--text-sm);
+            border: 1px solid var(--neutral-200);
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .btn-modern:hover {
+            color: var(--pure-white);
+            border-color: var(--primary-gold);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-modern:hover::before {
+            left: 0;
+        }
+
+        .btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4) var(--space-8);
+            background: var(--gradient-primary);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: var(--radius-2xl);
+            font-weight: 600;
+            font-size: var(--text-base);
+            border: none;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-elegant::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: var(--transition-base);
+        }
+
+        .btn-elegant:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold-lg);
+            background: var(--primary-gold-dark);
+        }
+
+        .btn-elegant:hover::before {
+            opacity: 1;
+        }
+
+        /* Enhanced Section Styles */
+        .section {
+            padding: var(--space-32) 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-20);
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: var(--space-2) var(--space-5);
+            background: var(--primary-gold-light);
+            color: var(--primary-gold-dark);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-6);
+            border: 1px solid var(--primary-gold);
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+            color: var(--text-primary);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header p {
+            font-family: 'Crimson Text', serif;
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* Enhanced About Section */
+        .about {
+            background: var(--bg-secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: var(--space-20);
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-6);
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: var(--space-6);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-highlight {
+            background: var(--bg-subtle);
+            padding: var(--space-8);
+            border-radius: var(--radius-2xl);
+            margin: var(--space-8) 0;
+            border-left: 4px solid var(--primary-gold);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-features {
+            display: grid;
+            gap: var(--space-6);
+        }
+
+        .feature {
+            padding: var(--space-8);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-2xl);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--neutral-200);
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            background: var(--pure-white);
+            border-color: var(--primary-gold-light);
+        }
+
+        .feature-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
+            color: var(--pure-white);
+            font-size: var(--text-2xl);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .feature h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+
+        .feature p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Enhanced Services Section */
+        .services {
+            background: var(--bg-subtle);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            padding: var(--space-10);
+            border-radius: var(--radius-3xl);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--neutral-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-gold-light);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
+            color: var(--pure-white);
+            font-size: var(--text-2xl);
+            box-shadow: var(--shadow-gold);
+            transition: var(--transition-bounce);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-2xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            margin-bottom: var(--space-6);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .service-details {
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--neutral-200);
+        }
+
+        .service-details p {
+            margin: var(--space-3) 0;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+
+        .service-details strong {
+            color: var(--text-primary);
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-size: var(--text-lg);
+        }
+
+        /* Enhanced Team Section */
+        .team {
+            background: var(--bg-secondary);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--space-10);
+        }
+
+        .team-member {
+            text-align: center;
+            padding: var(--space-10);
+            border-radius: var(--radius-3xl);
+            transition: var(--transition-smooth);
+            background: var(--bg-subtle);
+            border: 1px solid var(--neutral-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: var(--gradient-overlay);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .team-member:hover::before {
+            opacity: 1;
+        }
+
+        .team-member:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-2xl);
+            background: var(--pure-white);
+            border-color: var(--primary-gold-light);
+        }
+
+        .member-photo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--space-6);
+        }
+
+        .member-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            border: 4px solid var(--primary-gold);
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .team-member:hover .member-photo {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-gold-lg);
+        }
+
+        .member-name {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+            color: var(--text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .member-role {
+            color: var(--primary-gold);
+            font-weight: 500;
+            margin-bottom: var(--space-4);
+            font-size: var(--text-base);
+            position: relative;
+            z-index: 2;
+        }
+
+        .member-bio {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced Process Section */
+        .process {
+            background: var(--bg-subtle);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .process-step {
+            text-align: center;
+            padding: var(--space-10);
+            background: var(--pure-white);
+            border-radius: var(--radius-3xl);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--neutral-200);
+            position: relative;
+        }
+
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-gold-light);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            color: var(--pure-white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin: 0 auto var(--space-6);
+            box-shadow: var(--shadow-gold);
+            transition: var(--transition-bounce);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+
+        .step-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Enhanced Testimonials */
+        .testimonials {
+            background: var(--bg-secondary);
+        }
+
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-3xl);
+        }
+
+        .testimonials-grid {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: var(--space-8);
+        }
+
+        .testimonial {
+            min-width: calc(50% - var(--space-4));
+            padding: var(--space-10);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-3xl);
+            position: relative;
+            border: 1px solid var(--neutral-200);
+            transition: var(--transition-smooth);
+        }
+
+        .testimonial:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-xl);
+            background: var(--pure-white);
+            border-color: var(--primary-gold-light);
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: var(--space-4);
+            left: var(--space-6);
+            font-size: 4rem;
+            color: var(--primary-gold-light);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .testimonial-quote {
+            font-family: 'Crimson Text', serif;
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+            font-style: italic;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+
+        .author-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            border: 3px solid var(--primary-gold);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-1);
+        }
+
+        .author-role {
+            color: var(--text-light);
+            font-size: var(--text-sm);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-3);
+            margin-top: var(--space-10);
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            background: rgba(201, 169, 97, 0.3);
+            cursor: pointer;
+            transition: var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .nav-dot.active {
+            background: var(--primary-gold);
+            transform: scale(1.2);
+            border-color: var(--primary-gold-light);
+        }
+
+        .nav-dot:hover {
+            background: var(--primary-gold-light);
+        }
+
+        /* Enhanced FAQ */
+        .faq {
+            background: var(--bg-subtle);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--pure-white);
+            margin-bottom: var(--space-4);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            border: 1px solid var(--neutral-200);
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.active {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-gold-light);
+        }
+
+        .faq-question {
+            padding: var(--space-6);
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-base);
+            color: var(--text-primary);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .faq-question:hover {
+            background: rgba(201, 169, 97, 0.03);
+        }
+
+        .faq-answer {
+            padding: 0 var(--space-6) var(--space-6);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-icon {
+            font-size: var(--text-lg);
+            color: var(--primary-gold);
+            transition: var(--transition-base);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Enhanced Blog */
+        .blog {
+            background: var(--bg-secondary);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: var(--space-10);
+        }
+
+        .blog-post {
+            background: var(--pure-white);
+            border-radius: var(--radius-3xl);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--neutral-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .blog-post:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-gold-light);
+        }
+
+        .blog-image-container {
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .blog-post:hover .blog-image {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: var(--space-8);
+        }
+
+        .blog-date {
+            color: var(--primary-gold);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+            line-height: 1.7;
+        }
+
+        /* Enhanced Newsletter */
+        .newsletter {
+            background: var(--text-primary);
+            color: var(--pure-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 184, 150, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, rgba(201, 169, 97, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .newsletter .section-badge {
+            background: rgba(201, 169, 97, 0.15);
+            color: var(--primary-gold-light);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .newsletter h2 {
+            color: var(--pure-white);
+            margin-bottom: var(--space-6);
+        }
+
+        .newsletter p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-10);
+        }
+
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-6);
+            display: flex;
+            gap: var(--space-4);
+            align-items: end;
+            max-width: 600px;
+            margin: 0 auto var(--space-6);
+        }
+
+        .newsletter-input-group {
+            flex: 1;
+        }
+
+        .newsletter-label {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-2);
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: var(--space-4);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-base);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--pure-white);
+            transition: var(--transition-base);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-btn {
+            padding: var(--space-4) var(--space-6);
+            background: var(--gradient-primary);
+            color: var(--pure-white);
+            border: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-base);
+            white-space: nowrap;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .newsletter-btn:hover {
+            background: var(--primary-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold-lg);
+        }
+
+        .newsletter-disclaimer {
+            font-size: var(--text-sm);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .newsletter-disclaimer a {
+            color: var(--primary-gold-light);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition-base);
+        }
+
+        .newsletter-disclaimer a:hover {
+            border-bottom-color: var(--primary-gold-light);
+        }
+
+        /* Enhanced Footer */
+        .footer {
+            background: var(--pure-white);
+            border-top: 1px solid var(--neutral-200);
+            padding: var(--space-20) 0 var(--space-8);
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-16);
+            margin-bottom: var(--space-12);
+        }
+
+        .footer-brand {
+            max-width: 380px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .footer-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-8);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-3);
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-subtle);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: var(--transition-base);
+            text-decoration: none;
+            border: 1px solid var(--neutral-200);
+        }
+
+        .social-link:hover {
+            background: var(--primary-gold);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--primary-gold);
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-3);
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-base);
+            font-size: var(--text-base);
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            border-bottom-color: var(--primary-gold);
+        }
+
+        .footer-contact {
+            list-style: none;
+        }
+
+        .footer-contact li {
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+        }
+
+        .footer-contact i {
+            color: var(--primary-gold);
+            width: 18px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--neutral-200);
+            padding-top: var(--space-8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--space-8);
+        }
+
+        .footer-legal a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            transition: var(--transition-base);
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-legal a:hover {
+            color: var(--primary-gold);
+            border-bottom-color: var(--primary-gold);
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(201, 169, 97, 0.2);
+            border-top: 3px solid var(--primary-gold);
+            border-radius: var(--radius-full);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design - Mobile First Approach */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 var(--space-5);
+            }
+            
+            .hero-content,
+            .about-content {
+                gap: var(--space-16);
+            }
+            
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-12);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            :root {
+                --space-32: 6rem;
+                --space-24: 5rem;
+                --space-20: 4rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-16);
+                text-align: center;
+            }
+
+            .hero-visual-grid {
+                max-width: 500px;
+                margin: 0 auto;
+                height: 450px;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(var(--text-3xl), 8vw, var(--text-5xl));
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-12);
+            }
+
+            .section-header h2 {
+                font-size: clamp(var(--text-2xl), 6vw, var(--text-4xl));
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .services-grid,
+            .team-grid,
+            .blog-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --space-32: 4rem;
+                --space-24: 3.5rem;
+                --space-20: 3rem;
+                --space-16: 2.5rem;
+                --space-12: 2rem;
+                --space-10: 1.75rem;
+                --space-8: 1.5rem;
+            }
+
+            .header-content {
+                padding: 0 var(--space-4);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+
+            .hero {
+                padding: var(--space-20) 0;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(var(--text-2xl), 8vw, var(--text-4xl));
+                margin-bottom: var(--space-6);
+            }
+
+            .hero-subtitle {
+                font-size: var(--text-lg);
+                margin-bottom: var(--space-8);
+            }
+
+            .hero-visual-grid {
+                grid-template-columns: 1fr;
+                height: 350px;
+            }
+
+            .hero-card.card-main {
+                grid-row: span 1;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+                text-align: center;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: var(--space-3);
+            }
+
+            .section {
+                padding: var(--space-24) 0;
+            }
+
+            .section-header {
+                margin-bottom: var(--space-16);
+            }
+
+            .section-header h2 {
+                font-size: clamp(var(--text-xl), 7vw, var(--text-3xl));
+            }
+
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: var(--space-4);
+                padding: var(--space-5);
+            }
+
+            .newsletter-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .testimonial {
+                min-width: 100%;
+            }
+
+            .testimonials-grid {
+                gap: var(--space-6);
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: var(--space-10);
+                text-align: center;
+            }
+
+            .footer-brand {
+                max-width: none;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-4);
+            }
+
+            .footer-legal {
+                justify-content: center;
+            }
+
+            .services-grid,
+            .team-grid,
+            .process-steps,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card,
+            .team-member,
+            .process-step {
+                padding: var(--space-8);
+            }
+
+            .cookie-content {
+                flex-direction: column;
+                gap: var(--space-4);
+                text-align: center;
+            }
+
+            .cookie-actions {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --space-24: 3rem;
+                --space-20: 2.5rem;
+                --space-16: 2rem;
+                --space-12: 1.5rem;
+                --space-10: 1.25rem;
+                --space-8: 1rem;
+                --space-6: 0.75rem;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(var(--text-xl), 7vw, var(--text-3xl));
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: var(--text-base);
+            }
+
+            .section-header h2 {
+                font-size: clamp(var(--text-lg), 6vw, var(--text-2xl));
+            }
+
+            .service-card,
+            .team-member,
+            .process-step {
+                padding: var(--space-6);
+            }
+
+            .hero-visual-grid {
+                height: 300px;
+            }
+
+            .feature-icon,
+            .service-icon {
+                width: 64px;
+                height: 64px;
+                font-size: var(--text-xl);
+            }
+
+            .step-number {
+                width: 64px;
+                height: 64px;
+                font-size: var(--text-xl);
+            }
+
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .btn-elegant,
+            .btn-modern,
+            .btn-header {
+                padding: var(--space-3) var(--space-4);
+                font-size: var(--text-sm);
+            }
+
+            .newsletter-form {
+                padding: var(--space-4);
+            }
+        }
+
+        /* Enhanced Micro-Interactions */
+        @media (hover: hover) and (pointer: fine) {
+            .logo-container:hover .logo-image {
+                filter: drop-shadow(0 4px 8px rgba(201, 169, 97, 0.3));
+            }
+
+            .stat-item:hover .stat-number {
+                transform: scale(1.05);
+                color: var(--primary-gold-dark);
+            }
+
+            .feature:hover .feature-icon,
+            .service-card:hover .service-icon,
+            .process-step:hover .step-number {
+                animation: float 2s ease-in-out infinite;
+            }
+
+            .team-member:hover .member-photo {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            .nav-dot:hover {
+                transform: scale(1.1);
+            }
+
+            .social-link:hover {
+                animation: float 1s ease-in-out infinite;
+            }
+
+            .hero-card:hover {
+                animation: float 4s ease-in-out infinite;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .header,
+            .cookie-banner,
+            .mobile-nav,
+            .loading-overlay {
+                display: none;
+            }
+
+            .hero {
+                margin-top: 0;
+            }
+
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+
+            .section {
+                padding: 2rem 0;
+                break-inside: avoid;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-primary: #000000;
+                --text-secondary: #333333;
+                --primary-gold: #8B6914;
+                --bg-primary: #FFFFFF;
+                --bg-secondary: #FFFFFF;
+            }
+
+            .btn-primary,
+            .btn-elegant {
+                background: #000000;
+                border: 2px solid #000000;
+            }
+
+            .btn-primary:hover,
+            .btn-elegant:hover {
+                background: #333333;
+            }
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>Utilizamos cookies para melhorar sua experiência e garantir a privacidade dos seus dados conforme a LGPD. <a href="#privacy">Saiba mais</a></p>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn-cookie btn-accept" onclick="acceptCookies()">Aceitar todos</button>
+                <button class="btn-cookie btn-manage" onclick="manageCookies()">Gerenciar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="#" class="logo-container">
+                <img src="assets/logo.png" alt="Espaço Respirar Logo" class="logo-image">
+                
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="header-cta">
+                <a href="tel:+5511999999999" class="btn-header btn-secondary">
+                    <i class="fas fa-phone"></i>
+                    (11) 99999-9999
+                </a>
+                <a href="https://wa.me/5511999999999" class="btn-header btn-primary" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#sobre" onclick="closeMobileMenu()">Sobre</a></li>
+            <li><a href="#servicos" onclick="closeMobileMenu()">Serviços</a></li>
+            <li><a href="#equipe" onclick="closeMobileMenu()">Equipe</a></li>
+            <li><a href="#processo" onclick="closeMobileMenu()">Processo</a></li>
+            <li><a href="#depoimentos" onclick="closeMobileMenu()">Depoimentos</a></li>
+            <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
+            <li><a href="#blog" onclick="closeMobileMenu()">Blog</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="tel:+5511999999999" class="btn-header btn-secondary">
+                <i class="fas fa-phone"></i>
+                (11) 99999-9999
+            </a>
+            <a href="#" class="btn-header btn-primary" onclick="openWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                Conversar no WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Espaço Respirar – <span class="highlight">Terapia que acolhe e transforma</span></h1>
+                <p class="hero-subtitle">Atendimento psicanalítico presencial e online com foco em escuta profunda e acolhimento. Encontre o seu caminho para o bem-estar emocional em um ambiente seguro e acolhedor.</p>
+                <div class="hero-actions">
+                    <a href="#contato" class="btn-elegant">
+                        <i class="fas fa-calendar-check"></i>
+                        Agende sua primeira sessão
+                    </a>
+                    <a href="#equipe" class="btn-modern">
+                        <i class="fas fa-users"></i>
+                        Conheça os profissionais
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Anos de experiência</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Vidas transformadas</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfação dos pacientes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-grid">
+                    <div class="hero-card card-main">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="card-title">Cuidado Personalizado</h3>
+                        <p class="card-description">Cada pessoa é única, e nosso atendimento respeita sua singularidade, oferecendo um espaço seguro para autoconhecimento e crescimento.</p>
+                        <div class="card-stats">
+                            <div class="mini-stat">
+                                <div class="mini-stat-number">15+</div>
+                                <div class="mini-stat-label">Especialistas</div>
+                            </div>
+                            <div class="mini-stat">
+                                <div class="mini-stat-number">24/7</div>
+                                <div class="mini-stat-label">Suporte</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-heart"></i>
+                        </div>
+                        <h3 class="card-title">Confidencialidade</h3>
+                        <p class="card-description">Sigilo absoluto garantido em todas as sessões.</p>
+                    </div>
+                    <div class="hero-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="card-title">Online & Presencial</h3>
+                        <p class="card-description">Flexibilidade total para seu conforto e conveniência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Nossa Filosofia</div>
+                <h2>Uma Abordagem que Transforma</h2>
+                <p>Trabalhamos com a psicanálise como ferramenta de autoconhecimento e transformação, oferecendo um espaço seguro para você respirar e se redescobrir através da escuta profunda e do acolhimento genuíno.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Método Psicanalítico Humanizado</h3>
+                    <p>Utilizamos a escuta analítica para compreender os aspectos inconscientes que influenciam sua vida, promovendo insights profundos e duradouros. Nossa abordagem combina a tradição psicanalítica com um olhar contemporâneo e acolhedor.</p>
+                    
+                    <div class="about-highlight">
+                        <p><strong>Nosso compromisso é proporcionar um ambiente onde você possa se expressar livremente, sem julgamentos, encontrando caminhos para uma vida mais plena e autêntica.</strong></p>
+                    </div>
+
+                    <p><strong>Duração do acompanhamento:</strong> Geralmente entre 6 meses a 2 anos, variando conforme cada caso e objetivos pessoais. Respeitamos sempre o tempo de cada pessoa.</p>
+                    
+                    <p><strong>Benefícios esperados:</strong> Maior autoconhecimento, melhora nos relacionamentos, redução da ansiedade, desenvolvimento de recursos internos para lidar com desafios e uma compreensão mais profunda de si mesmo.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-ear-listen"></i>
+                        </div>
+                        <h4>Escuta Profunda</h4>
+                        <p>Ambiente acolhedor onde você pode se expressar sem julgamentos, com total liberdade e segurança emocional.</p>
+                    </div>
+                    <div class="feature animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-heart"></i>
+                        </div>
+                        <h4>Confidencialidade Absoluta</h4>
+                        <p>Sigilo profissional rigorosamente respeitado, garantido por código de ética e nossa postura ética inabalável.</p>
+                    </div>
+                    <div class="feature animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Transformação Genuína</h4>
+                        <p>Processo gradual de autoconhecimento que promove mudanças duradouras e crescimento pessoal autêntico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="section services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Nossos Serviços</div>
+                <h2>Cuidado Especializado para Cada Necessidade</h2>
+                <p>Oferecemos diferentes modalidades de atendimento, todas fundamentadas na escuta psicanalítica e no acolhimento humano, para atender suas necessidades específicas com excelência.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Terapia Individual</h3>
+                    <p>Atendimento personalizado focado no seu processo de autoconhecimento e bem-estar emocional, respeitando seu ritmo e singularidade.</p>
+                    <div class="service-details">
+                        <p><strong>Duração:</strong> 50 minutos por sessão</p>
+                        <p><strong>Frequência:</strong> Semanal ou quinzenal</p>
+                        <p><strong>Modalidade:</strong> Presencial ou online</p>
+                        <p class="price"><strong>Investimento:</strong> A partir de R$ 120,00</p>
+                    </div>
+                    <a href="#contato" class="btn-modern">
+                        <i class="fas fa-calendar-plus"></i>
+                        Agendar consulta
+                    </a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Terapia de Casal</h3>
+                    <p>Trabalho conjunto para fortalecer vínculos, melhorar a comunicação e redescobrir a harmonia na relação através do diálogo genuíno.</p>
+                    <div class="service-details">
+                        <p><strong>Duração:</strong> 60 minutos por sessão</p>
+                        <p><strong>Frequência:</strong> Semanal ou quinzenal</p>
+                        <p><strong>Modalidade:</strong> Presencial ou online</p>
+                        <p class="price"><strong>Investimento:</strong> A partir de R$ 150,00</p>
+                    </div>
+                    <a href="#contato" class="btn-modern">
+                        <i class="fas fa-calendar-plus"></i>
+                        Agendar consulta
+                    </a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Infantil e Adolescente</h3>
+                    <p>Atendimento especializado para crianças e adolescentes, com abordagem lúdica e adaptada para cada faixa etária e necessidade.</p>
+                    <div class="service-details">
+                        <p><strong>Duração:</strong> 45 minutos por sessão</p>
+                        <p><strong>Frequência:</strong> Semanal</p>
+                        <p><strong>Modalidade:</strong> Presencial preferencial</p>
+                        <p class="price"><strong>Investimento:</strong> A partir de R$ 110,00</p>
+                    </div>
+                    <a href="#contato" class="btn-modern">
+                        <i class="fas fa-calendar-plus"></i>
+                        Agendar consulta
+                    </a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Atendimento Online</h3>
+                    <p>Terapia no conforto da sua casa, com a mesma qualidade e eficácia do atendimento presencial, utilizando plataformas seguras.</p>
+                    <div class="service-details">
+                        <p><strong>Duração:</strong> 50 minutos por sessão</p>
+                        <p><strong>Frequência:</strong> Semanal ou quinzenal</p>
+                        <p><strong>Plataforma:</strong> Segura e privada</p>
+                        <p class="price"><strong>Investimento:</strong> A partir de R$ 100,00</p>
+                    </div>
+                    <a href="#contato" class="btn-modern">
+                        <i class="fas fa-calendar-plus"></i>
+                        Agendar consulta
+                    </a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Supervisão Clínica</h3>
+                    <p>Acompanhamento especializado para profissionais da área, desenvolvendo competências clínicas e reflexão sobre a prática.</p>
+                    <div class="service-details">
+                        <p><strong>Duração:</strong> 50 minutos por sessão</p>
+                        <p><strong>Frequência:</strong> Semanal ou quinzenal</p>
+                        <p><strong>Formato:</strong> Individual ou em grupo</p>
+                        <p class="price"><strong>Investimento:</strong> Consulte valores</p>
+                    </div>
+                    <a href="#contato" class="btn-modern">
+                        <i class="fas fa-info-circle"></i>
+                        Mais informações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="section team">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Nossa Equipe</div>
+                <h2>Profissionais Dedicados ao Seu Bem-Estar</h2>
+                <p>Uma equipe de psicanalistas e psicólogos qualificados, experientes e comprometidos em oferecer o melhor acolhimento em seu processo terapêutico.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member animate-on-scroll">
+                    <div class="member-photo-container">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dra. Ana Silva" class="member-photo">
+                    </div>
+                    <h3 class="member-name">Dra. Ana Silva</h3>
+                    <p class="member-role">Psicanalista • CRP 06/123456</p>
+                    <p class="member-bio">Especialista em psicanálise clínica com 12 anos de experiência. Mestre em Psicologia Clínica pela USP, com formação continuada em psicanálise lacaniana.</p>
+                    <a href="#" class="btn-modern">
+                        <i class="fas fa-user-circle"></i>
+                        Ver perfil completo
+                    </a>
+                </div>
+
+                <div class="team-member animate-on-scroll">
+                    <div class="member-photo-container">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dr. Carlos Mendes" class="member-photo">
+                    </div>
+                    <h3 class="member-name">Dr. Carlos Mendes</h3>
+                    <p class="member-role">Psicólogo Clínico • CRP 06/654321</p>
+                    <p class="member-bio">Especialização em terapia de casal e família. Doutor em Psicologia Social pela PUC-SP, com 15 anos dedicados ao atendimento clínico.</p>
+                    <a href="#" class="btn-modern">
+                        <i class="fas fa-user-circle"></i>
+                        Ver perfil completo
+                    </a>
+                </div>
+
+                <div class="team-member animate-on-scroll">
+                    <div class="member-photo-container">
+                        <img src="https://images.unsplash.com/photo-1594824797499-5bb1f7663f30?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Dra. Maria Santos" class="member-photo">
+                    </div>
+                    <h3 class="member-name">Dra. Maria Santos</h3>
+                    <p class="member-role">Psicóloga Infantil • CRP 06/789012</p>
+                    <p class="member-bio">Especialista em psicologia infantil e do adolescente. Formação em ludoterapia, arteterapia e 8 anos de experiência com crianças e famílias.</p>
+                    <a href="#" class="btn-modern">
+                        <i class="fas fa-user-circle"></i>
+                        Ver perfil completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processo" class="section process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Como Funciona</div>
+                <h2>Seu Caminho de Transformação</h2>
+                <p>Entenda nosso processo terapêutico cuidadosamente estruturado para oferecer o melhor acolhimento desde o primeiro contato até sua jornada de autodescoberta.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Primeiro Contato</h3>
+                    <p class="step-description">Entre em contato conosco por telefone ou WhatsApp. Faremos uma conversa acolhedora para entender suas necessidades e agendar sua primeira sessão com total cuidado.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Avaliação Inicial</h3>
+                    <p class="step-description">Na primeira sessão, teremos um diálogo profundo sobre seus objetivos, histórico e expectativas. Juntos, definiremos a melhor abordagem para seu caso único.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Planejamento Personalizado</h3>
+                    <p class="step-description">Estabelecemos a frequência ideal das sessões e definimos horários fixos que se harmonizam perfeitamente com sua rotina e necessidades.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Jornada de Transformação</h3>
+                    <p class="step-description">Iniciamos o processo terapêutico respeitando seu ritmo único, sempre garantindo confidencialidade absoluta e um ambiente seguro para seu crescimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="section testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Depoimentos</div>
+                <h2>Histórias de Transformação</h2>
+                <p>Depoimentos autênticos de pessoas que encontraram seu caminho de bem-estar e autoconhecimento conosco</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <div class="testimonial animate-on-scroll">
+                        <p class="testimonial-quote">O Espaço Respirar me proporcionou um ambiente verdadeiramente seguro para me conhecer melhor. Hoje me sinto mais confiante, em paz comigo mesma e capaz de enfrentar os desafios da vida com mais serenidade e autocompaixão.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b814?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Marina P." class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Marina P.</div>
+                                <div class="author-role">Terapia individual • 1 ano</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial animate-on-scroll">
+                        <p class="testimonial-quote">A terapia de casal literalmente salvou nosso relacionamento. Aprendemos a nos comunicar de forma mais profunda e verdadeira. Hoje somos mais unidos, compreensivos e felizes do que jamais imaginamos ser possível.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Roberto e Lucia" class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Roberto e Lucia M.</div>
+                                <div class="author-role">Terapia de casal • 8 meses</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial animate-on-scroll">
+                        <p class="testimonial-quote">Minha filha estava atravessando um período muito desafiador na adolescência. O atendimento especializado foi transformador - ela desenvolveu autoestima, confiança e habilidades emocionais que levaremos para a vida toda.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Patricia L." class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Patricia L.</div>
+                                <div class="author-role">Mãe • Terapia infantil</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial animate-on-scroll">
+                        <p class="testimonial-quote">O atendimento online superou todas as minhas expectativas. Mesmo à distância, senti o acolhimento, a escuta atenta e a transformação acontecendo. A qualidade é idêntica ao presencial.</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="João R." class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">João R.</div>
+                                <div class="author-role">Terapia online • 6 meses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <span class="nav-dot active" onclick="showTestimonial(0)"></span>
+                    <span class="nav-dot" onclick="showTestimonial(1)"></span>
+                    <span class="nav-dot" onclick="showTestimonial(2)"></span>
+                    <span class="nav-dot" onclick="showTestimonial(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Dúvidas Frequentes</div>
+                <h2>Esclarecemos Suas Questões</h2>
+                <p>Respostas claras e acolhedoras para as dúvidas mais comuns sobre nossos serviços e processo terapêutico</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Como sei se preciso de terapia psicanalítica?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A terapia pode ajudar quando você sente que questões emocionais estão impactando sua vida, relacionamentos ou bem-estar. Não é necessário estar em crise - a terapia é também preventiva e promove autoconhecimento profundo. Se você busca compreender melhor a si mesmo, seus padrões e relacionamentos, a psicanálise pode ser um caminho valioso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Qual a diferença entre psicólogo e psicanalista?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O psicólogo é formado em Psicologia e pode usar diversas abordagens terapêuticas. O psicanalista é um profissional (psicólogo ou médico) com especialização específica em psicanálise, baseada nas teorias de Freud, Lacan e seus sucessores. A psicanálise trabalha especificamente com o inconsciente e oferece uma compreensão profunda dos aspectos psíquicos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        O atendimento online é realmente eficaz?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente! Estudos científicos comprovam a eficácia da terapia online. Oferecemos a mesma qualidade, escuta profunda e acolhimento do atendimento presencial, com total privacidade e sigilo. É uma excelente opção para quem tem dificuldades de deslocamento, vive longe ou prefere o conforto e segurança de casa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Quanto tempo dura um processo psicanalítico?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cada processo é absolutamente único e respeitamos o tempo singular de cada pessoa. Geralmente, os primeiros benefícios são percebidos nos primeiros meses. Um processo pode durar de 6 meses a alguns anos, dependendo dos objetivos, da complexidade das questões e do ritmo individual. O importante é que você sinta-se acolhido em seu tempo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Vocês aceitam convênio médico?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabalhamos principalmente como clínica particular, garantindo assim total liberdade terapêutica e privacidade. Fornecemos todos os documentos necessários (recibos, declarações) para solicitação de reembolso parcial pelos convênios que oferecem essa modalidade. Consulte seu plano de saúde sobre cobertura e valores.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        É possível remarcar ou cancelar sessões?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, compreendemos que imprevistos acontecem. Pedimos apenas que nos comunique com antecedência mínima de 24 horas para reagendamentos. Esta política nos permite organizar melhor a agenda e eventualmente oferecer o horário para outros pacientes. Cancelamentos em cima da hora são cobrados conforme acordado no início do tratamento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Como é garantida a confidencialidade?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A confidencialidade é absoluta e sagrada em nosso trabalho. Seguimos rigorosamente o código de ética profissional, utilizamos plataformas seguras para atendimento online, mantemos arquivos protegidos e nunca compartilhamos informações. Seu sigilo é nossa prioridade máxima e compromisso ético fundamental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Recursos</div>
+                <h2>Conteúdos para Sua Jornada</h2>
+                <p>Artigos e recursos cuidadosamente selecionados para apoiar seu processo de autoconhecimento e bem-estar emocional</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-post animate-on-scroll">
+                    <div class="blog-image-container">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Técnicas para ansiedade" class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">15 de Março, 2024</div>
+                        <h3 class="blog-title">5 Técnicas Psicanalíticas para Lidar com a Ansiedade</h3>
+                        <p class="blog-excerpt">Descubra métodos baseados na psicanálise para compreender e gerenciar a ansiedade, encontrando caminhos para mais tranquilidade em sua vida cotidiana.</p>
+                        <a href="#" class="btn-modern">
+                            <i class="fas fa-arrow-right"></i>
+                            Ler artigo completo
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-post animate-on-scroll">
+                    <div class="blog-image-container">
+                        <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Comunicação em relacionamentos" class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">8 de Março, 2024</div>
+                        <h3 class="blog-title">A Arte da Comunicação Autêntica nos Relacionamentos</h3>
+                        <p class="blog-excerpt">Como desenvolver uma comunicação mais profunda e verdadeira pode transformar radicalmente seus relacionamentos pessoais e profissionais.</p>
+                        <a href="#" class="btn-modern">
+                            <i class="fas fa-arrow-right"></i>
+                            Ler artigo completo
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-post animate-on-scroll">
+                    <div class="blog-image-container">
+                        <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Exercícios de autoconhecimento" class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">1 de Março, 2024</div>
+                        <h3 class="blog-title">7 Exercícios de Autoconhecimento Baseados na Psicanálise</h3>
+                        <p class="blog-excerpt">Práticas reflexivas inspiradas na teoria psicanalítica que você pode desenvolver em casa para iniciar uma jornada de autodescoberta mais profunda.</p>
+                        <a href="#" class="btn-modern">
+                            <i class="fas fa-arrow-right"></i>
+                            Ler artigo completo
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-content animate-on-scroll">
+                <div class="section-badge">Conteúdo Exclusivo</div>
+                <h2>Transforme Sua Vida com Conhecimento</h2>
+                <p>Receba conteúdos exclusivos sobre bem-estar emocional, autoconhecimento e dicas práticas baseadas em nossa experiência clínica. Baixe gratuitamente nosso ebook <strong>"Respire: 5 Técnicas Iniciais"</strong>.</p>
+                
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <div class="newsletter-input-group">
+                        <label for="newsletter-email" class="newsletter-label">Seu melhor e-mail</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="exemplo@email.com" required>
+                    </div>
+                    <button type="submit" class="newsletter-btn">
+                        <i class="fas fa-download"></i>
+                        Baixar ebook gratuito
+                    </button>
+                </form>
+                
+                <p class="newsletter-disclaimer">
+                    Ao enviar, você concorda com nossa <a href="#privacy">política de privacidade (LGPD)</a> e receberá conteúdos valiosos sobre bem-estar emocional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand animate-on-scroll">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Espaço Respirar Logo">
+                        <div class="footer-logo-text">Espaço Respirar</div>
+                    </div>
+                    <p class="footer-description">
+                        Clínica de psicanálise dedicada ao seu bem-estar emocional e crescimento pessoal. Oferecendo cuidado humano e acolhimento profissional há mais de 10 anos.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section animate-on-scroll">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Terapia Individual</a></li>
+                        <li><a href="#servicos">Terapia de Casal</a></li>
+                        <li><a href="#servicos">Infantil e Adolescente</a></li>
+                        <li><a href="#servicos">Atendimento Online</a></li>
+                        <li><a href="#servicos">Supervisão Clínica</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section animate-on-scroll">
+                    <h3>Informações</h3>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#equipe">Nossa Equipe</a></li>
+                        <li><a href="#processo">Como Funciona</a></li>
+                        <li><a href="#blog">Blog e Recursos</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section animate-on-scroll">
+                    <h3>Contato</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Vila Madalena, São Paulo - SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@espacorespirar.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 20h | Sáb: 8h às 14h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Espaço Respirar - Clínica de Psicanálise. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#privacy">Política de Privacidade</a>
+                    <a href="#terms">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Enhanced Performance and Smooth Interactions
+        
+        // Optimized loading and initialization
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+                // Initialize animations after loading
+                initializeAnimations();
+                initializeTestimonials();
+                initializeCookieBanner();
+            }, 600);
+        });
+
+        // Enhanced Intersection Observer for animations
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -30px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Staggered animation delay
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, index * 100);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animation elements
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Advanced Cookie Banner Management
+        function initializeCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const accepted = localStorage.getItem('cookiesAccepted');
+            
+            if (!accepted) {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                }, 2000);
+            }
+        }
+
+        function acceptCookies() {
+            const preferences = {
+                necessary: true,
+                analytics: true,
+                marketing: true,
+                functional: true,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('cookiesAccepted', 'true');
+            localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+            
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+            
+            // Track acceptance
+            gtag && gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': 'granted'
+            });
+            
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 400);
+        }
+
+        function manageCookies() {
+            const preferences = {
+                necessary: true,
+                analytics: confirm('Aceitar cookies analíticos? Nos ajudam a melhorar nossos serviços.'),
+                marketing: confirm('Aceitar cookies de marketing? Personalizam sua experiência.'),
+                functional: confirm('Aceitar cookies funcionais? Melhoram a funcionalidade do site.'),
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('cookiesAccepted', 'true');
+            localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+            
+            // Update consent based on preferences
+            gtag && gtag('consent', 'update', {
+                'analytics_storage': preferences.analytics ? 'granted' : 'denied',
+                'ad_storage': preferences.marketing ? 'granted' : 'denied'
+            });
+            
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+            
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 400);
+        }
+
+        // Enhanced Header Behavior
+        let lastScrollTop = 0;
+        let scrollTimer = null;
+        const header = document.getElementById('header');
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollingDown = scrollTop > lastScrollTop;
+            const scrollThreshold = 100;
+            const hideThreshold = 200;
+            
+            // Add scrolled class
+            if (scrollTop > scrollThreshold) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide/show header on scroll
+            if (scrollingDown && scrollTop > hideThreshold) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
+
+        // Throttled scroll handler
+        window.addEventListener('scroll', function() {
+            if (scrollTimer) {
+                clearTimeout(scrollTimer);
+            }
+            scrollTimer = setTimeout(handleScroll, 10);
+        }, { passive: true });
+
+        // Mobile Menu Enhanced Functionality
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const body = document.body;
+            
+            mobileBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            
+            if (mobileNav.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const body = document.body;
+            
+            mobileBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            
+            if (mobileNav.classList.contains('active') && 
+                !mobileNav.contains(e.target) && 
+                !mobileBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Enhanced FAQ Functionality
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close other FAQ items with smooth animation
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+                // Smooth scroll to ensure visibility
+                setTimeout(() => {
+                    faqItem.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 300);
+            } else {
+                faqItem.classList.remove('active');
+            }
+        }
+
+        // Enhanced Testimonials Slider
+        let currentTestimonial = 0;
+        const totalTestimonials = 4;
+        let testimonialInterval;
+        let isTestimonialHovered = false;
+
+        function initializeTestimonials() {
+            const testimonialSlider = document.querySelector('.testimonials-slider');
+            
+            if (testimonialSlider) {
+                // Pause auto-play on hover
+                testimonialSlider.addEventListener('mouseenter', () => {
+                    isTestimonialHovered = true;
+                    clearInterval(testimonialInterval);
+                });
+                
+                testimonialSlider.addEventListener('mouseleave', () => {
+                    isTestimonialHovered = false;
+                    startTestimonialAutoPlay();
+                });
+                
+                // Touch/swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                testimonialSlider.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                testimonialSlider.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+                
+                function handleSwipe() {
+                    if (touchEndX < touchStartX - 50) {
+                        // Swipe left - next
+                        currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+                        showTestimonial(currentTestimonial);
+                    }
+                    if (touchEndX > touchStartX + 50) {
+                        // Swipe right - previous
+                        currentTestimonial = currentTestimonial === 0 ? totalTestimonials - 1 : currentTestimonial - 1;
+                        showTestimonial(currentTestimonial);
+                    }
+                }
+                
+                startTestimonialAutoPlay();
+            }
+        }
+
+        function startTestimonialAutoPlay() {
+            if (!isTestimonialHovered) {
+                testimonialInterval = setInterval(() => {
+                    currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+                    showTestimonial(currentTestimonial);
+                }, 5000);
+            }
+        }
+
+        function showTestimonial(index) {
+            const grid = document.getElementById('testimonialsGrid');
+            const dots = document.querySelectorAll('.nav-dot');
+            
+            if (grid) {
+                const isMobile = window.innerWidth <= 768;
+                const translateX = isMobile ? -index * 100 : -index * 50;
+                grid.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentTestimonial = index;
+            
+            // Restart auto-play
+            clearInterval(testimonialInterval);
+            if (!isTestimonialHovered) {
+                startTestimonialAutoPlay();
+            }
+        }
+
+        // Enhanced Newsletter Subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const form = event.target;
+            const email = form.querySelector('input[type="email"]').value;
+            const button = form.querySelector('.newsletter-btn');
+            
+            // Validate email
+            if (!isValidEmail(email)) {
+                showNotification('Por favor, insira um e-mail válido.', 'error');
+                return;
+            }
+            
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Success animation
+                button.innerHTML = '<i class="fas fa-check"></i> Ebook enviado!';
+                button.style.background = 'var(--primary-gold-dark)';
+                
+                showSuccessModal(email);
+                
+                // Store subscription
+                localStorage.setItem('newsletterSubscribed', JSON.stringify({
+                    email: email,
+                    date: new Date().toISOString()
+                }));
+                
+                form.reset();
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.style.background = '';
+                }, 3000);
+                
+            }, 2000);
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function showSuccessModal(email) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(28, 22, 17, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                backdrop-filter: blur(10px);
+                animation: fadeIn 0.3s ease-out;
+            `;
+            
+            modal.innerHTML = `
+                <div style="
+                    background: var(--pure-white);
+                    padding: var(--space-10);
+                    border-radius: var(--radius-3xl);
+                    box-shadow: var(--shadow-2xl);
+                    text-align: center;
+                    max-width: 500px;
+                    margin: var(--space-4);
+                    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                ">
+                    <div style="
+                        font-size: 4rem; 
+                        color: var(--primary-gold); 
+                        margin-bottom: var(--space-6);
+                        animation: bounce 0.6s ease-out 0.2s both;
+                    ">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 style="
+                        margin-bottom: var(--space-4); 
+                        color: var(--text-primary); 
+                        font-family: 'Playfair Display', serif;
+                        font-size: var(--text-2xl);
+                    ">Perfeito!</h3>
+                    <p style="
+                        margin-bottom: var(--space-8); 
+                        color: var(--text-secondary);
+                        line-height: 1.6;
+                    ">
+                        Seu ebook <strong>"Respire: 5 Técnicas Iniciais"</strong> foi enviado para:<br>
+                        <strong style="color: var(--primary-gold);">${email}</strong><br><br>
+                        Verifique sua caixa de entrada e spam. Você também receberá conteúdos exclusivos sobre bem-estar emocional.
+                    </p>
+                    <button onclick="this.closest('[style*=fixed]').remove()" class="btn-elegant">
+                        <i class="fas fa-heart"></i>
+                        Obrigado!
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Auto-close after 8 seconds
+            setTimeout(() => {
+                if (modal.parentElement) {
+                    modal.style.animation = 'fadeOut 0.3s ease-out forwards';
+                    setTimeout(() => modal.remove(), 300);
+                }
+            }, 8000);
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: var(--space-6);
+                background: ${type === 'error' ? '#ef4444' : 'var(--primary-gold)'};
+                color: var(--pure-white);
+                padding: var(--space-4) var(--space-6);
+                border-radius: var(--radius-xl);
+                box-shadow: var(--shadow-lg);
+                z-index: 10001;
+                transform: translateX(400px);
+                transition: var(--transition-smooth);
+                max-width: 300px;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        // Enhanced WhatsApp Integration
+        function openWhatsApp(message = '') {
+            const phone = '5511999999999';
+            const defaultMessage = 'Olá! Gostaria de agendar uma consulta no Espaço Respirar. 😊';
+            const finalMessage = message || defaultMessage;
+            const encodedMessage = encodeURIComponent(finalMessage);
+            
+            // Track interaction
+            gtag && gtag('event', 'whatsapp_click', {
+                'event_category': 'contact',
+                'event_label': 'header_button'
+            });
+            
+            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+        }
+
+        // Enhanced Smooth Scrolling with offset calculation
+        function initializeSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        // Close mobile menu if open
+                        closeMobileMenu();
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Keyboard navigation support
+        function initializeKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                    // Close any open modals
+                    document.querySelectorAll('[style*="position: fixed"]').forEach(modal => {
+                        if (modal.id !== 'header' && modal.id !== 'cookieBanner') {
+                            modal.remove();
+                        }
+                    });
+                }
+                
+                // Arrow key navigation for testimonials
+                if (e.key === 'ArrowLeft') {
+                    const prevIndex = currentTestimonial === 0 ? totalTestimonials - 1 : currentTestimonial - 1;
+                    showTestimonial(prevIndex);
+                }
+                if (e.key === 'ArrowRight') {
+                    const nextIndex = (currentTestimonial + 1) % totalTestimonials;
+                    showTestimonial(nextIndex);
+                }
+            });
+        }
+
+        // Lazy loading for images
+        function initializeLazyLoading() {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Performance monitoring
+        function trackPerformance() {
+            if ('performance' in window) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        const perfData = performance.getEntriesByType('navigation')[0];
+                        const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+                        
+                        // Track performance
+                        gtag && gtag('event', 'page_load_time', {
+                            'event_category': 'performance',
+                            'value': Math.round(loadTime)
+                        });
+                    }, 0);
+                });
+            }
+        }
+
+        // Initialize all functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSmoothScrolling();
+            initializeKeyboardNavigation();
+            initializeLazyLoading();
+            trackPerformance();
+        });
+
+        // Add CSS animations for modals
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+            @keyframes slideUp {
+                from { transform: translateY(30px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes bounce {
+                0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+                40%, 43% { transform: translate3d(0, -10px, 0); }
+                70% { transform: translate3d(0, -5px, 0); }
+                90% { transform: translate3d(0, -2px, 0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
